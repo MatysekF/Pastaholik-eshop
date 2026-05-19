@@ -8,7 +8,7 @@
     <!-- Modern Google Font -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
 
     <!-- Link to external styling stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -18,7 +18,7 @@
     <!-- Hlavní navigace -->
     <header>
         <div class="logo" id="brandLogo" style="cursor:pointer;">PASTAHOLIK.cz</div>
-        <div class="cart-widget" id="cartWidget">
+        <div class="cart-widget" id="cartWidget" style="cursor:pointer;">
             🛒 Košík: <span id="cartCount">0</span> ks (<span id="cartTotal">0</span> Kč)
         </div>
     </header>
@@ -132,6 +132,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- Spodní lišta (Patička) -->
+        <footer>
+            <div class="footer-links">
+                <a href="#" id="linkVop">Obchodní podmínky (VOP)</a> | 
+                <a href="#" id="linkGdpr">Ochrana osobních údajů (GDPR)</a> | 
+                <a href="#" id="linkReklamace">Reklamační řád</a>
+            </div>
+            <p>&copy; 2026 Pastaholik.cz. Provozovatel: Matyáš F., IČO: 67676767, Město: Praha 5.</p>
+        </footer>
     </div>
 
     <!-- STRÁNKA DETAILU PRODUKTU (Celoobrazovková) -->
@@ -152,111 +162,61 @@
             </div>
         </div>
     </div>
-barilla
 
-    <!-- STRÁNKA VOP (Přes celou obrazovku) -->
-<div id="vopPage" class="full-page-view" style="display: none;">
-    <div class="cart-container">
-        <button class="back-btn back-to-store-global">← Zpět do e-shopu</button>
-        <h1 style="border-bottom: 2px solid #f59e0b; padding-bottom: 10px; margin-bottom: 20px;">Všeobecné obchodní podmínky (VOP)</h1>
-        <div style="color: #cbd5e1; font-size: 1rem; line-height: 1.8;">
-            <p style="margin-bottom: 20px;"><strong>1. Úvodní ustanovení</strong><br>Tyto obchodní podmínky platí pro nákup v internetovém obchodě PASTAHOLIK.cz. Podmínky blíže vymezují a upřesňují práva a povinnosti prodávajícího a kupujícího.</p>
-            <p style="margin-bottom: 20px;"><strong>2. Objednávka a uzavření kupní smlouvy</strong><br>Všechny objednávky podané prostřednictvím tohoto e-shopu jsou závazné. Podáním objednávky kupující stvrzuje, že se seznámil s těmito obchodními podmínkami a že s nimi souhlasí.</p>
-            <p style="margin-bottom: 20px;"><strong>3. Odstoupení od smlouvy (Vrácení zboží)</strong><br>Podle § 1829 občanského zákoníku má kupující spotřebitel právo odstoupit od smlouvy bez udání důvodu do 14 dnů od převzetí zboží. Vzhledem k povaze zboží (potraviny) nelze vrátit zboží, které bylo vybaleno z originálního ochranného obalu z hygienických důvodů.</p>
-            <p style="margin-bottom: 20px;"><strong>4. Dodací podmínky</strong><br>Zboží je odesíláno prostřednictvím zvolené přepravní služby na území České republiky. Doba dodání je obvykle 48 hodin od potvrzení objednávky.</p>
+    <!-- STRÁNKA NÁKUPNÍHO KOŠÍKU (Celoobrazovková) -->
+    <div id="cartPage" class="full-page-view" style="display: none;">
+        <div class="cart-container">
+            <button class="back-btn" id="backToStoreFromCartBtn">← Pokračovat v nákupu</button>
+            <h1>Váš nákupní košík</h1>
+            <div id="cartItemsList"></div>
+            <div class="cart-summary">
+                <h3>Celkem k úhradě: <span id="cartPageTotal">0</span> Kč</h3>
+                <button class="pay-btn" id="checkoutPayBtn">Zaplatit objednávku</button>
+            </div>
         </div>
     </div>
-</div>
-
-<!-- STRÁNKA GDPR (Přes celou obrazovku) -->
-<div id="gdprPage" class="full-page-view" style="display: none;">
-    <div class="cart-container">
-        <button class="back-btn back-to-store-global">← Zpět do e-shopu</button>
-        <h1 style="border-bottom: 2px solid #f59e0b; padding-bottom: 10px; margin-bottom: 20px;">Ochrana osobních údajů (GDPR)</h1>
-        <div style="color: #cbd5e1; font-size: 1rem; line-height: 1.8;">
-            <p style="margin-bottom: 20px;"><strong>1. Správce osobních údajů</strong><br>Správcem osobních údajů podle nařízení (EU) 2016/679 (GDPR) je provozovatel e-shopu PASTAHOLIK.cz uvedeným v patičce webu.</p>
-            <p style="margin-bottom: 20px;"><strong>2. Rozsah zpracování</strong><br>Zpracováváme pouze údaje nezbytné pro vyřízení objednávky: Jméno, příjmení, doručovací adresa, e-mail a telefonní číslo.</p>
-            <p style="margin-bottom: 20px;"><strong>3. Účel zpracování</strong><br>Údaje jsou zpracovávány výhradně za účelem splnění kupní smlouvy (vyřízení objednávky a doručení zásilky) a plnění zákonných daňových povinností.</p>
-        </div>
-    </div>
-</div>
-
-<!-- STRÁNKA REKLAMACE (Přes celou obrazovku) -->
-<div id="reklamacePage" class="full-page-view" style="display: none;">
-    <div class="cart-container">
-        <button class="back-btn back-to-store-global">← Zpět do e-shopu</button>
-        <h1 style="border-bottom: 2px solid #f59e0b; padding-bottom: 10px; margin-bottom: 20px;">Reklamační řád</h1>
-        <div style="color: #cbd5e1; font-size: 1rem; line-height: 1.8;">
-            <p style="margin-bottom: 20px;"><strong>1. Právo na reklamaci</strong><br>Kupující je povinen zboží při převzetí zkontrolovat. Pokud vykazuje vady (např. porušený obal, prošlá trvanlivost), má právo zboží reklamovat.</p>
-            <p style="margin-bottom: 20px;"><strong>2. Průběh reklamace</strong><br>Kupující neprodleně kontaktuje prodejce e-mailem s popisem vady a fotografií poškozeného zbo války. Reklamace bude vyřízena nejpozději do 30 dnů od jejího uplatnění.</p>
-            <p style="margin-bottom: 20px;"><strong>3. Záruční doba</strong><br>Na potravinářské zboží se vztahuje záruční doba do data minimální trvanlivosti uvedeného na obalu produktu.</p>
-        </div>
-    </div>
-</div>
-
-
-    <!-- STRÁNKA PRÁVNÍCH DOKUMENTŮ (Celoobrazovková) -->
-    <div id="legalPage" class="full-page-view" style="display: none;">
-        <div class="legal-container">
-            <button class="back-btn" id="backToStoreFromLegalBtn">← Zpět do e-shopu</button>
-            <h1 id="legalPageTitle">Právní dokument</h1>
-            <div id="legalPageContent" class="legal-content"></div>
-        </div>
-    </div>
-
-    <!-- Spodní lišta (Patička) -->
-    <footer>
-        <div class="footer-links">
-    <a href="#" id="linkVop">Obchodní podmínky (VOP)</a> | 
-    <a href="#" id="linkGdpr">Ochrana osobních údajů (GDPR)</a> | 
-    <a href="#" id="linkReklamace">Reklamační řád</a>
-</div>
-
-        <p>&copy; 2026 Pastaholik.cz. Provozovatel: Vaše Jméno, IČO: 12345678, Město: Lysá nad Labem.</p>
-    </footer>
 
     <!-- Modální okno pro VOP -->
-<div id="vopModal" class="modal" style="display: none;">
-    <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
-        <span class="close-modal" id="closeVop">&times;</span>
-        <h2>Všeobecné obchodní podmínky (VOP)</h2>
-        <div style="margin-top: 15px; text-align: left; font-size: 0.9rem; color: #cbd5e1;">
-            <p><strong>1. Úvodní ustanovení</strong><br>Tyto obchodní podmínky platí pro nákup v internetovém obchodě PASTAHOLIK.cz. Podmínky blíže vymezují a upřesňují práva a povinnosti prodávajícího a kupujícího.</p><br>
-            <p><strong>2. Objednávka a uzavření kupní smlouvy</strong><br>Všechny objednávky podané prostřednictvím tohoto e-shopu jsou závazné. Podáním objednávky kupující stvrzuje, že se seznámil s těmito obchodními podmínkami a že s nimi souhlasí.</p><br>
-            <p><strong>3. Odstoupení od smlouvy (Vrácení zboží)</strong><br>Podle § 1829 občanského zákoníku má kupující spotřebitel právo odstoupit od smlouvy bez udání důvodu do 14 dnů od převzetí zboží. Vzhledem k povaze zboží (potraviny) nelze vrátit zboží, které bylo vybaleno z originálního ochranného obalu z hygienických důvodů.</p><br>
-            <p><strong>4. Dodací podmínky</strong><br>Zboží je odesíláno prostřednictvím zvolené přepravní služby na území České republiky. Doba dodání je obvykle 48 hodin od potvrzení objednávky.</p>
+    <div id="vopModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
+            <span class="close-modal" id="closeVop">&times;</span>
+            <h2>Všeobecné obchodní podmínky (VOP)</h2>
+            <div style="margin-top: 15px; text-align: left; font-size: 0.9rem; color: #cbd5e1;">
+                <p><strong>1. Úvodní ustanovení</strong><br>Tyto obchodní podmínky platí pro nákup v internetovém obchodě PASTAHOLIK.cz. Podmínky blíže vymezují a upřesňují práva a povinnosti prodávajícího a kupujícího.</p><br>
+                <p><strong>2. Objednávka a uzavření kupní smlouvy</strong><br>Všechny objednávky podané prostřednictvím tohoto e-shopu jsou závazné. Podáním objednávky kupující stvrzuje, že se seznámil s těmito obchodními podmínkami a že s nimi souhlasí.</p><br>
+                <p><strong>3. Odstoupení od smlouvy (Vrácení zboží)</strong><br>Podle § 1829 občanského zákoníku má kupující spotřebitel právo odstoupit od smlouvy bez udání důvodu do 14 dnů od převzetí zboží. Vzhledem k povaze zboží (potraviny) nelze vrátit zboží, které bylo vybaleno z originálního ochranného obalu z hygienických důvodů.</p><br>
+                <p><strong>4. Dodací podmínky</strong><br>Zboží je odesíláno prostřednictvím zvolené přepravní služby na území České republiky. Doba dodání je obvykle 48 hodin od potvrzení objednávky.</p>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Modální okno pro GDPR -->
-<div id="gdprModal" class="modal" style="display: none;">
-    <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
-        <span class="close-modal" id="closeGdpr">&times;</span>
-        <h2>Ochrana osobních údajů (GDPR)</h2>
-        <div style="margin-top: 15px; text-align: left; font-size: 0.9rem; color: #cbd5e1;">
-            <p><strong>1. Správce osobních údajů</strong><br>Správcem osobních údajů podle nařízení (EU) 2016/679 (GDPR) je provozovatel e-shopu PASTAHOLIK.cz uvedeným v patičce webu.</p><br>
-            <p><strong>2. Rozsah zpracování</strong><br>Zpracováváme pouze údaje nezbytné pro vyřízení objednávky: Jméno, příjmení, doručovací adresa, e-mail a telefonní číslo.</p><br>
-            <p><strong>3. Účel zpracování</strong><br>Údaje jsou zpracovávány výhradně za účelem splnění kupní smlouvy (vyřízení objednávky a doručení zásilky) a plnění zákonných daňových povinností.</p>
+    <!-- Modální okno pro GDPR -->
+    <div id="gdprModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
+            <span class="close-modal" id="closeGdpr">&times;</span>
+            <h2>Ochrana osobních údajů (GDPR)</h2>
+            <div style="margin-top: 15px; text-align: left; font-size: 0.9rem; color: #cbd5e1;">
+                <p><strong>1. Správce osobních údajů</strong><br>Správcem osobních údajů podle nařízení (EU) 2016/679 (GDPR) je provozovatel e-shopu PASTAHOLIK.cz uvedeným v patičce webu.</p><br>
+                <p><strong>2. Rozsah zpracování</strong><br>Zpracováváme pouze údaje nezbytné pro vyřízení objednávky: Jméno, příjmení, doručovací adresa, e-mail a telefonní číslo.</p><br>
+                <p><strong>3. Účel zpracování</strong><br>Údaje jsou zpracovávány výhradně za účelem splnění kupní smlouvy (vyřízení objednávky a doručení zásilky) a plnění zákonných daňových povinností.</p>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Modální okno pro Reklamační řád -->
-<div id="reklamaceModal" class="modal" style="display: none;">
-    <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
-        <span class="close-modal" id="closeReklamace">&times;</span>
-        <h2>Reklamační řád</h2>
-        <div style="margin-top: 15px; text-align: left; font-size: 0.9rem; color: #cbd5e1;">
-            <p><strong>1. Právo na reklamaci</strong><br>Kupující je povinen zboží při převzetí zkontrolovat. Pokud vykazuje vady (např. porušený obal, prošlá trvanlivost), má právo zboží reklamovat.</p><br>
-            <p><strong>2. Průběh reklamace</strong><br>Kupující neprodleně kontaktuje prodejce e-mailem s popisem vady a fotografií poškozeného zboží. Reklamace bude vyřízena nejpozději do 30 dnů od jejího uplatnění.</p><br>
-            <p><strong>3. Záruční doba</strong><br>Na potravinářské zboží se vztahuje záruční doba do data minimální trvanlivosti uvedeného na obalu produktu.</p>
+    <!-- Modální okno pro Reklamační řád -->
+    <div id="reklamaceModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
+            <span class="close-modal" id="closeReklamace">&times;</span>
+            <h2>Reklamační řád</h2>
+            <div style="margin-top: 15px; text-align: left; font-size: 0.9rem; color: #cbd5e1;">
+                <p><strong>1. Právo na reklamaci</strong><br>Kupující je povinen zboží při převzetí zkontrolovat. Pokud vykazuje vady (např. porušený obal, prošlá trvanlivost), má právo zboží reklamovat.</p><br>
+                <p><strong>2. Průběh reklamace</strong><br>Kupující neprodleně kontaktuje prodejce e-mailem s popisem vady a fotografií poškozeného zboží. Reklamace bude vyřízena nejpozději do 30 dnů od jejího uplatnění.</p><br>
+                <p><strong>3. Záruční doba</strong><br>Na potravinářské zboží se vztahuje záruční doba do data minimální trvanlivosti uvedeného na obalu produktu.</p>
+            </div>
         </div>
     </div>
-</div>
 
-
-    <!-- Link to logic execution script -->
+    <!-- Odkaz na JavaScript soubor -->
     <script src="script.js"></script>
 </body>
 </html>
