@@ -6,31 +6,31 @@ const productsData = {
         title: "Barilla Fusilli N°. 98",
         price: 59,
         desc: "Prvotřídní bezvaječné těstoviny vyrobené ze 100% krupice z tvrdé pšenice (semoliny). Jejich precizní spirálovitý tvar byl navržen tak, aby na svém povrchu udržel maximální množství omáčky, což z nich dělá ideální volbu pro lehká pesta i bohaté sýrové variace.\n\nBalení: 500g | Doba varu: 11 minut | Alergeny: Lepek.",
-        images: ["images/Barilla_Fusilli_N.98.webp", "https://wikimedia.org"]
+        images: ["Images/Barilla_Fusilli_N.98.webp", "https://wikimedia.org"]
     },
     conchiglie: {
         title: "Barilla Conchiglie Rigate N°. 93",
         price: 59,
         desc: "Tradiční italské těstoviny ve tvaru mušliček. Výrazné vnější rýhování a hluboká vnitřní dutina fungují jako dokonalá kapsa na omáčku. Nejlépe se kombinují s hustými rajčatovo-masovými omáčkami typu Bolognese nebo jemnými zeleninovými krémy.\n\nBalení: 500g | Doba varu: 12 minut | Alergeny: Lepek.",
-        images: ["images/Barilla_Conchiglie_Rigate_N.93.webp", "https://wikimedia.org"]
+        images: ["Images/Barilla_Conchiglie_Rigate_N.93.webp", "https://wikimedia.org"]
     },
     penne: {
         title: "Barilla Penne Rigate N°. 73",
         price: 59,
         desc: "Kultovní šikmo zkosené trubičky s podélným rýhováním patří mezi nejoblíbenější tvary v celé Itálii. Jsou nekompromisní v kombinaci s pálivou omáčkou Arrabbiata, omáčkou Carbonara nebo k zapékání v troubě.\n\nBalení: 500g | Doba varu: 11 minut | Alergeny: Lepek.",
-        images: ["images/Barilla_Penne_Rigate_N.73.webp", "https://wikimedia.org"]
+        images: ["Images/Barilla_Penne_Rigate_N.73.webp", "https://wikimedia.org"]
     },
     basilico: {
         title: "Barilla Basilico Omáčka",
         price: 79,
         desc: "Autentická italská omáčka připravená z pomalu pasírovaných slunečných rajčat a voňavých lístků čerstvé bazalky. Neobsahuje žádné konzervanty ani umělá barviva.\n\nBalení: 400g | Vyrobeno v Itálii.",
-        images: ["images/Barilla_Basilico_Omacka.webp", "https://wikimedia.org"]
+        images: ["Images/Barilla_Basilico_Omacka.webp", "https://wikimedia.org"]
     },
     aranciata: {
         title: "San Pellegrino Aranciata",
         price: 45,
         desc: "Prémiový italský perlivý nápoj s obsahem 20% šťávy ze zralých sicilských pomerančů. Dokonalé letní osvěžení s vyváženou sladkokyselou chutí.\n\nBalení: 330ml (Plech).",
-        images: ["images/San_Pellegrino_Aranciata.webp", "https://wikimedia.org"]
+        images: ["Images/San_Pellegrino_Aranciata.webp", "https://wikimedia.org"]
     }
 };
 
