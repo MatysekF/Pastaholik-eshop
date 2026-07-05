@@ -24,6 +24,15 @@ header {
     z-index: 100;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .logo {
     font-weight: 800;
     font-size: 1.2rem;
@@ -118,6 +127,7 @@ header {
     object-fit: contain;
     background-color: #ffffff;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .product-info {
@@ -223,7 +233,7 @@ header {
 /* Detail layout */
 .detail-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 40px;
     background-color: #1e293b;
     padding: 30px;
